@@ -386,8 +386,10 @@ public class DatePickerDialog extends DialogFragment implements View.OnClickList
         final int headerBackground = a.getColor(R.styleable.DatePickerDialog_date_picker_header_background_color, Color.WHITE);
         final int headerTextColor = a.getColor(R.styleable.DatePickerDialog_date_picker_header_text_color, Color.WHITE);
 
-        mDayOfWeekView.setTextColor(headerTextColor);
-        mDayOfWeekView.setBackgroundColor(headerBackground);
+		if(mDayOfWeekView != null){
+			mDayOfWeekView.setTextColor(headerTextColor);
+			mDayOfWeekView.setBackgroundColor(headerBackground);
+		}
 
         final int selectedDateBoxBkg = a.getColor(R.styleable.DatePickerDialog_date_picker_date_container_background_color, Color.WHITE);
         mSelectedDateLayout.setBackgroundColor(selectedDateBoxBkg);
